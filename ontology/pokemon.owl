@@ -1,0 +1,1157 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology#"
+     xml:base="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cs270-hw2-pokemon-ontology="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/altLabel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/evolvesFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/evolvesFrom">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/evolvesTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/evolvesTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/evolvesTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/foundInTaxon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/foundInTaxon">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Gene"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasGene -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasGene">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Organism"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Gene"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasOrthologTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasOrthologTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Gene"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Gene"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weakness -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weakness">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/characteristic -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/characteristic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/demographic -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/demographic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/description"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/feature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/feature">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/characteristic"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/height -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/height">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/demographic"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Organism"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/power -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/power">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/characteristic"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/region -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/region">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/demographic"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weight">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/demographic"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/wingSpan -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/wingSpan">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/characteristic"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FlyingPokemon"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ACE2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ACE2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/HumanGene"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SevereCovidRiskGene"/>
+        <cs270-hw2-pokemon-ontology:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angiotensin Converting Enzyme 2</cs270-hw2-pokemon-ontology:altLabel>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Receptor in the lungs that provides an entrypoint for the Sars-Cov2.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ARID1A -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ARID1A">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/AsymptomaticCovidRiskGene"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/HumanGene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/AsymptomaticCovid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/AsymptomaticCovid">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Organism"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasGene"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/AsymptomaticCovidRiskGene"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/CovidPhenotype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/AsymptomaticCovidRiskGene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/AsymptomaticCovidRiskGene">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/AsymptomaticCovidRiskGene"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasOrthologTo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/AsymptomaticCovidRiskGene"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Gene"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/MildCovidRiskGene"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SevereCovidRiskGene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Bulbasaur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Bulbasaur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/GrassPokemon"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/height"/>
+                        <owl:allValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:datatypeComplementOf>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:datatypeComplementOf>
+                            </rdfs:Datatype>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weight"/>
+                        <owl:allValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:datatypeComplementOf>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:datatypeComplementOf>
+                            </rdfs:Datatype>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/evolvesTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Ivysaur"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charizard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charizard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemon"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FlyingPokemon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charmeleon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charmeleon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/evolvesTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charizard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/CovidPhenotype -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/CovidPhenotype"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Eevee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Eevee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/NormalPokemon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/evolvesTo"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Flareon"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Jolteon"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/height"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:datatypeComplementOf>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:datatypeComplementOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weakness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/GrassPokemon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemonGene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemonGene">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/PokemonGene"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/foundInTaxon"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FLAME2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FLAME2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemonGene"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasOrthologTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ACE2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weakness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemon"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weakness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/WaterPokemon"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemonGene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemonGene">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/PokemonGene"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/foundInTaxon"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Flareon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Flareon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FlyingPokemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FlyingPokemon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Gene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Gene"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/GrassPokemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/GrassPokemon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weakness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemon"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weakness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FlyingPokemon"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/GrassPokemonGene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/GrassPokemonGene">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/PokemonGene"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/foundInTaxon"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/GrassPokemon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Ho-Oh -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Ho-Oh">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemon"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FlyingPokemon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/wingSpan"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</xsd:minExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Organism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasGene"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/HumanGene"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/HumanGene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/HumanGene">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Ivysaur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Ivysaur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/GrassPokemon"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/PoisonPokemon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Jolteon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Jolteon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/LEAF6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/LEAF6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/GrassPokemonGene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/LIT1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/LIT1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FirePokemonGene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/LegendaryPokemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/LegendaryPokemon">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FlyingPokemon"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/wingSpan"/>
+                        <owl:allValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/MildCovid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/MildCovid">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Organism"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasGene"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/MildCovidRiskGene"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/CovidPhenotype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/MildCovidRiskGene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/MildCovidRiskGene">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/MildCovidRiskGene"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasOrthologTo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/MildCovidRiskGene"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/NormalPokemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/NormalPokemon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Organism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Organism">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/name"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pikachu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pikachu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/PoisonPokemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/PoisonPokemon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Organism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weakness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/PoisonPokemon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasGene"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/PokemonGene"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/height"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/power"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/feature"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bird</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mammal</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reptile</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rodent</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seed</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/region"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:oneOf>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">johto</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kanto</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </owl:oneOf>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <cs270-hw2-pokemon-ontology:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pocket Monster</cs270-hw2-pokemon-ontology:altLabel>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fantasy creatures in the Pokemon world, drawn as if mutated from real-world creatures</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/PokemonGene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/PokemonGene">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/RAB7A -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/RAB7A">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/HumanGene"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/MildCovidRiskGene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SHOCK1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SHOCK1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemonGene"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasOrthologTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/RAB7A"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SPARK4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SPARK4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemonGene"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasOrthologTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ARID1A"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SevereCovid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SevereCovid">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Organism"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasGene"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SevereCovidRiskGene"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/CovidPhenotype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SevereCovidRiskGene -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SevereCovidRiskGene">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SevereCovidRiskGene"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasOrthologTo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SevereCovidRiskGene"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Gene"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Squirtle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Squirtle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/WaterPokemon"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/height"/>
+                        <owl:allValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:datatypeComplementOf>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:datatypeComplementOf>
+                            </rdfs:Datatype>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weight"/>
+                        <owl:allValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:datatypeComplementOf>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:datatypeComplementOf>
+                            </rdfs:Datatype>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/evolvesTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/WarTortle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/StarterPokemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/StarterPokemon">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/height"/>
+                                <owl:allValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:datatypeComplementOf>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</xsd:minInclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:datatypeComplementOf>
+                                    </rdfs:Datatype>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weight"/>
+                                <owl:allValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:datatypeComplementOf>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</xsd:minInclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:datatypeComplementOf>
+                                    </rdfs:Datatype>
+                                </owl:allValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/VINE3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/VINE3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/GrassPokemonGene"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/hasOrthologTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ARID1A"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/WarTortle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/WarTortle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/WaterPokemon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/WaterPokemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/WaterPokemon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pokemon"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weakness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemon"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/weakness"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/GrassPokemon"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Zapados -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Zapados">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/ElectricPokemon"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/FlyingPokemon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/wingSpan"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</xsd:minExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Bulbasaur1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Bulbasaur1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Bulbasaur"/>
+        <cs270-hw2-pokemon-ontology:hasGene rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/VINE3_Type_A"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charizard1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charizard1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charizard"/>
+        <cs270-hw2-pokemon-ontology:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</cs270-hw2-pokemon-ontology:height>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charmeleon1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charmeleon1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charmeleon"/>
+        <cs270-hw2-pokemon-ontology:evolvesTo rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Charizard1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pikachu1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pikachu1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/Pikachu"/>
+        <cs270-hw2-pokemon-ontology:power rdf:datatype="http://www.w3.org/2001/XMLSchema#int">300</cs270-hw2-pokemon-ontology:power>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SHOCK1_Type_D -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SHOCK1_Type_D">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SHOCK1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SPARK4_Type_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SPARK4_Type_A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SPARK4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/VINE3_Type_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/VINE3_Type_A">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/VINE3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/AsymptomaticCovid"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/MildCovid"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kevinlin/ontologies/cs270-hw2-pokemon-ontology/SevereCovid"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

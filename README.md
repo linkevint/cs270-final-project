@@ -14,5 +14,10 @@ Follow these steps to retrieve the appropriate data:
 # Running EDA Python scripts
 1. Create a new python environment with the latest version of Python. e.g. run `conda create --name cs270-python3`.
 2. Activate the environment. e.g. run `conda activate cs270-python3`.
-3. Install the following packages in your new env: `pandas`, `pyarrow`
+3. Install the following packages in your new env: `pandas`
 4. Run the desired scripts to get the results.
+
+# Running the PSM
+1. Make sure the Python 3 environment you created is still activated.
+2. Install the following packages in your env: ``
+3. Run `python psm.py`
