@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# SOURCE: https://github.com/Yelp/dataset-examples/blob/master/json_to_csv_converter.py and https://github.com/Yelp/dataset-examples/issues/42
 """Convert the Yelp Dataset Challenge dataset from json format to csv.
 For more information on the Yelp Dataset Challenge please visit http://yelp.com/dataset_challenge
 """

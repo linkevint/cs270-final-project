@@ -1,3 +1,4 @@
 .idea/
 /yelp_dataset/*.csv
 /yelp_dataset/*.json
+/yelp_dataset/*.pkl
