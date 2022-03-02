@@ -21,15 +21,30 @@
     
 
 
+    <!-- http://protege.stanford.edu/ontologies/business/specializesIn -->
+
+    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/business/specializesIn">
+        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/business/Business"/>
+        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/business/Specialization"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://protege.stanford.edu/ontologies/businesss/foundIn -->
 
-    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/businesss/foundIn"/>
+    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/businesss/foundIn">
+        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/business/Specialization"/>
+        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/business/Business"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://protege.stanford.edu/ontologies/businesss/hasAmbience -->
 
-    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/businesss/hasAmbience"/>
+    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/businesss/hasAmbience">
+        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/business/Business"/>
+        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/business/Ambience"/>
+    </owl:ObjectProperty>
     
 
 
@@ -380,6 +395,14 @@
 
     <owl:Class rdf:about="http://protege.stanford.edu/ontologies/business/ChineseRestaurant">
         <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/business/EastAsianRestaurant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://protege.stanford.edu/ontologies/business/ClassyAmbience -->
+
+    <owl:Class rdf:about="http://protege.stanford.edu/ontologies/business/ClassyAmbience">
+        <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/business/Ambience"/>
     </owl:Class>
     
 
