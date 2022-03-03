@@ -3,3 +3,4 @@ yelp_dataset/*.csv
 yelp_dataset/*.json
 yelp_dataset/*.pkl
 eda/.ipynb_checkpoints/*
+psm/.ipynb_checkpoints/*
