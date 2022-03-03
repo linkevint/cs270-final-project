@@ -21,29 +21,29 @@
     
 
 
-    <!-- http://protege.stanford.edu/ontologies/business/specializesIn -->
+    <!-- http://protege.stanford.edu/ontologies/business/foundIn -->
 
-    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/business/specializesIn">
-        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/business/Business"/>
-        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/business/Specialization"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://protege.stanford.edu/ontologies/businesss/foundIn -->
-
-    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/businesss/foundIn">
+    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/business/foundIn">
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/business/Specialization"/>
         <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/business/Business"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://protege.stanford.edu/ontologies/businesss/hasAmbience -->
+    <!-- http://protege.stanford.edu/ontologies/business/hasAmbience -->
 
-    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/businesss/hasAmbience">
+    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/business/hasAmbience">
         <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/business/Business"/>
         <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/business/Ambience"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://protege.stanford.edu/ontologies/business/specializesIn -->
+
+    <owl:ObjectProperty rdf:about="http://protege.stanford.edu/ontologies/business/specializesIn">
+        <rdfs:domain rdf:resource="http://protege.stanford.edu/ontologies/business/Business"/>
+        <rdfs:range rdf:resource="http://protege.stanford.edu/ontologies/business/Specialization"/>
     </owl:ObjectProperty>
     
 
@@ -119,6 +119,42 @@
     <!-- http://protege.stanford.edu/ontologies/business/longitude -->
 
     <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/business/longitude">
+        <rdfs:subPropertyOf rdf:resource="http://protege.stanford.edu/ontologies/business/location"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://protege.stanford.edu/ontologies/business/maxLat -->
+
+    <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/business/maxLat">
+        <rdfs:subPropertyOf rdf:resource="http://protege.stanford.edu/ontologies/business/location"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://protege.stanford.edu/ontologies/business/maxLon -->
+
+    <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/business/maxLon">
+        <rdfs:subPropertyOf rdf:resource="http://protege.stanford.edu/ontologies/business/location"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://protege.stanford.edu/ontologies/business/minLat -->
+
+    <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/business/minLat">
+        <rdfs:subPropertyOf rdf:resource="http://protege.stanford.edu/ontologies/business/location"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://protege.stanford.edu/ontologies/business/minLon -->
+
+    <owl:DatatypeProperty rdf:about="http://protege.stanford.edu/ontologies/business/minLon">
         <rdfs:subPropertyOf rdf:resource="http://protege.stanford.edu/ontologies/business/location"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
@@ -319,6 +355,42 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://protege.stanford.edu/ontologies/business/latitude"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://protege.stanford.edu/ontologies/business/longitude"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://protege.stanford.edu/ontologies/business/maxLat"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://protege.stanford.edu/ontologies/business/maxLon"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://protege.stanford.edu/ontologies/business/minLat"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://protege.stanford.edu/ontologies/business/minLon"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://protege.stanford.edu/ontologies/business/reviewCount"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
@@ -413,7 +485,7 @@
         <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/business/Specialization"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://protege.stanford.edu/ontologies/businesss/foundIn"/>
+                <owl:onProperty rdf:resource="http://protege.stanford.edu/ontologies/business/foundIn"/>
                 <owl:allValuesFrom rdf:resource="http://protege.stanford.edu/ontologies/business/ChineseRestaurant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -435,7 +507,7 @@
         <rdfs:subClassOf rdf:resource="http://protege.stanford.edu/ontologies/business/Specialization"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://protege.stanford.edu/ontologies/businesss/foundIn"/>
+                <owl:onProperty rdf:resource="http://protege.stanford.edu/ontologies/business/foundIn"/>
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
